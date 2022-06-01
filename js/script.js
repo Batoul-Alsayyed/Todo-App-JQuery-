@@ -9,4 +9,14 @@ $( document ).ready(function() {
         //removing text after we are done writing 
         $(".form-control").val('');
     })
+    $(document).on('change', 'input[type="checkbox"]', function(){
+        if($(this).is(':checked')){
+            $(this).closest("li").children(".remove").addClass("active");
+        }else{
+            $(this).closest("li").children(".remove").removeClass("active");
+        }
+    })
+    $(document).on('click', '.remove', function(){
+        $(this).parent().remove();
+    })
 });
