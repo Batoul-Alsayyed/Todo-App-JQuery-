@@ -62,3 +62,21 @@ body{
     margin-top: 15px;
     box-shadow: 0px 5px 10px rgb(0,0,0,0.55); 
 }
+.left-cont input{
+    display: none;
+    cursor: pointer;
+}
+.left-cont label{
+    position: relative;
+    cursor: pointer;
+}
+.left-cont label:before{
+    content: '';
+    padding: 11px;
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
+    background: #412d46;
+    border-radius: 3px;
+    z-index: 2;
+}
