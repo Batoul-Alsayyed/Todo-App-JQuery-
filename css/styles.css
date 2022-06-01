@@ -98,10 +98,10 @@ body{
     color: #FF00FF;
     cursor: pointer;
     line-height: 1;
-    transform: translateY(48 px);
+    transform: translateX(48px);
     transition: .5s;
 }
 .remove.active{
-    transform: translateY(0px);
+    transform: translateX(0px);
     transition: .5s;
 }
