@@ -29,24 +29,29 @@ $(document).ready(function () {
   });
 
   class Todo {
-    constructor(id, title, description, point, is_done, created_at) {
-      this.id = id;
-      this.title = title;
+    constructor(description, point, is_done) {
+      this.id = Math.floor(Math.random()*1000);
+      this.title = "---Task---";
       this.description = description;
       this.point = point;
       this.is_done = is_done;
-      this.created_at = created_at;
+      var d = new Date();
+      this.timeCreatedAt= "";
+      this.timeCreatedAt+=d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();   
     }
   }
 
   const Todo1 = new Todo(
-    "0",
     "Task 1",
     "Solving the assignment",
     5,
-    false,
-    "1PM"
+    false
   );
+  console.log('id=',Todo1.id);
+  console.log('title:',Todo1.title);
+  console.log('description: ',Todo1.description);
+  console.log('point',Todo1.point);
+  console.log('isDone : ',Todo1.is_done);
+  console.log('Time create at: ',Todo1.timeCreatedAt);
 
-  console.log(Todo1.id);
 });
