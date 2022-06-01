@@ -94,3 +94,14 @@ body{
     border-width: 0px 2px 2px 0px;
     transform: rotate(45deg);
 }
+.remove{
+    color: #FF00FF;
+    cursor: pointer;
+    line-height: 1;
+    transform: translateY(48 px);
+    transition: .5s;
+}
+.remove.active{
+    transform: translateY(0px);
+    transition: .5s;
+}
