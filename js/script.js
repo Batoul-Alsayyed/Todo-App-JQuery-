@@ -6,5 +6,7 @@ $( document ).ready(function() {
             count ++;
             $(".todo-list").append('<li><div class="left-cont"><input type="checkbox" id="check-' +count+'" name=""><label for="check-'+count+'" ></label><span>'+inputval+'</span></div><span class="remove"><i class="material-icons">delete</i></span></li>');
         }
+        //removing text after we are done writing 
+        $(".form-control").val('');
     })
 });
