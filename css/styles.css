@@ -14,6 +14,11 @@ body{
 .todo-container{
     width: 40%;
 }
+.todo-container h1{
+    margin-left: 20%;
+    size: 20px;
+    margin-bottom: 10%;
+}
 .input{
     display: flex;
     justify-content: space-between;
