@@ -79,3 +79,18 @@ body{
     background: #412d46;
     border-radius: 3px;
 }
+.left-cont input:checked + label:before{
+    background: #EE82EE;
+}
+.left-cont input:checked + label:after{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    top: 4px;
+    left: 8px;
+    width: 5px;
+    height: 12px;
+    border: solid #221525;
+    border-width: 0px 2px 2px 0px;
+    transform: rotate(45deg);
+}
