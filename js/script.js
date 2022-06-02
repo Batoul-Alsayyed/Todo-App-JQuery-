@@ -25,11 +25,17 @@
         deleteTodo(event.target.parentElement.getAttribute("data-id"));
         event.target.parentElement.remove();
     }
-    
+
+    if(event.target.classList.contains("todo")) {
+        //Toggle completed for the task 
+        toggleStatusTodo(event.target.getAttribute("data-id"))
+        // Toggle done class
+        event.target.classList.toggle("done");
+    }
   });
   
   function addTodoToArray(todotext) {
-    const todo = {
+    let todo = {
       id: Math.floor(Math.random() * 1000),
       title: "---Task---",
       description: todotext,
@@ -68,6 +74,7 @@
       div.appendChild(span);
       //add todo div to main todos div 
       $(".todos").append(div);
+      console.log(arrayOfTodos);
     });
   }
   function addDataToLocalStorage(arrayOfTodos){
@@ -90,4 +97,12 @@ function deleteTodo(todoId){
     addDataToLocalStorage(arrayOfTodos);
 }
 
+function toggleStatusTodo(todoId){
+     for (var i = 0; i<arrayOfTodos.length; i++){
+         if(arrayOfTodos[i].id === todoId){
+             arrayOfTodos[i].isDone == false ?  (arrayOfTodos[i].isDone == true) : (arrayOfTodos[i].isDone == false); 
+         }
+     }
+     addDataToLocalStorage(arrayOfTodos);
 
+}
