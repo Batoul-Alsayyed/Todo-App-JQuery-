@@ -33,6 +33,10 @@ $(document).ready(function () {
       //create main div
       let div = document.createElement("div");
       div.className = "todo";
+      //check if task is done
+      if (todo.isDone){
+          div.className = "todo done";
+      }
       div.setAttribute("data-id", todo.id);
       div.appendChild(document.createTextNode(todo.description));
       //create delete button
@@ -41,7 +45,8 @@ $(document).ready(function () {
       span.appendChild(document.createTextNode("delete"));
       //append button to main div
       div.appendChild(span);
-      console.log(div);
+      //add todo div to main todos div 
+      $(".todos").append(div);
     });
   }
 });
