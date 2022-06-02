@@ -21,8 +21,9 @@
   //clicking on delete element
   $( ".todos").click(function( event ) {
     if(event.target.classList.contains("del")){
+        //from local storage as well
+        deleteTodo(event.target.parentElement.getAttribute("data-id"));
         event.target.parentElement.remove();
-
     }
     
   });
@@ -79,6 +80,14 @@
         //Adding todos that are in local storage
         displayTodos(todos);
     }
+}
+
+function deleteTodo(todoId){
+    // for (var i = 0; i<arrayOfTodos.length; i++){
+    //     console.log(`${arrayOfTodos[i].id} === ${todoId}`);
+    // }
+    arrayOfTodos = arrayOfTodos.filter((todo) => todo.id != todoId);
+    addDataToLocalStorage(arrayOfTodos);
 }
 
 
