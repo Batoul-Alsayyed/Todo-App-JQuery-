@@ -23,6 +23,8 @@ $(document).ready(function () {
     arrayOfTodos.push(todo);
     //now displaying the tasks
     displayTodos(arrayOfTodos);
+    //Add tasks to local storage
+    addDataToLocalStorage(arrayOfTodos);
   }
 
   function displayTodos(arrayOfTodos) {
@@ -48,5 +50,8 @@ $(document).ready(function () {
       //add todo div to main todos div 
       $(".todos").append(div);
     });
+  }
+  function addDataToLocalStorage(arrayOfTodos){
+      //
   }
 });
