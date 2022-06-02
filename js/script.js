@@ -26,4 +26,23 @@ $(document).ready(function () {
 
     }
     
+    function displayTodos(arrayOfTodos){
+        //Emptying todo list ul
+        $(".todo-list").innerHTML = "";
+        //now looping over the array
+        arrayOfTodos.forEach((todo) => {
+         let div = document.createElement("div");
+         div.className = "todo";
+         div.appendChild(document.createTextNode(todo.description));
+         
+         //create delete button
+         
+         let span = document.createElement("span");
+         span.className = "remove";
+         span.append(document.createTextNode("Delete"));
+         //Append Button to main div
+         div.append(span);
+         console.log(div);
+        })
+    } 
 });
