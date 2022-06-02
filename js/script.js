@@ -1,6 +1,5 @@
 $(document).ready(function () {
   let arrayOfTodos = [];
-
   //Add todo
   $(".add").click(function () {
     if ($(".form-control").val() !== "") {
@@ -52,6 +51,15 @@ $(document).ready(function () {
     });
   }
   function addDataToLocalStorage(arrayOfTodos){
-      //
+      window.localStorage.setItem("todos",JSON.stringify(arrayOfTodos));
   }
+  getDataFromLocalStorage();
+  function getDataFromLocalStorage(){
+    let data = window.localStorage.getItem("todos");
+    if (data){
+        let todos = JSON.parse();
+        console.log(todos);
+    }
+}
+
 });
